@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+.comfy-cli-home/
 venv/
 .env
 .DS_Store
