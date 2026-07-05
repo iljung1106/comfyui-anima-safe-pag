@@ -1,0 +1,22 @@
+[project]
+name = "anima-safe-pag"
+version = "0.1.0"
+description = "A soft, Anima-friendly Perturbed Attention Guidance node for ComfyUI."
+license = { file = "LICENSE" }
+authors = [
+    { name = "iljung1106", email = "1wndrla17@gmail.com" },
+]
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/iljung1106/comfyui-anima-safe-pag"
+Documentation = "https://github.com/iljung1106/comfyui-anima-safe-pag/blob/main/README.md"
+"Bug Tracker" = "https://github.com/iljung1106/comfyui-anima-safe-pag/issues"
+
+[tool.comfy]
+PublisherId = "iljung1106"
+DisplayName = "Anima Safe PAG"
