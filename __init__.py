@@ -137,6 +137,11 @@ def _soft_pag_attention(attn_module, q, k, v, strength, heads):
 
 def _make_pag_compute_attention(attn_module, original_compute, pag_index, perturbation_strength, head_indices):
     def compute_attention(self, q, k, v, transformer_options=None):
+        if perturbation_strength <= 0:
+            return original_compute(q, k, v, transformer_options=transformer_options or {})
+        # New ComfyUI passes single-use AttentionTensorContainers; older versions pass tensors.
+        if not torch.is_tensor(q):
+            q, k, v = q.take(), k.take(), v.take()
         transformer_options = transformer_options or {}
         labels = _expand_cond_labels(transformer_options, q.shape[0], q.device)
         if labels is None:

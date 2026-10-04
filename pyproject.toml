@@ -1,6 +1,6 @@
 [project]
 name = "anima-safe-pag"
-version = "0.1.0"
+version = "0.1.1"
 description = "A soft, Anima-friendly Perturbed Attention Guidance node for ComfyUI."
 license = { file = "LICENSE" }
 authors = [
